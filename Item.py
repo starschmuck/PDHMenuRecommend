@@ -1,26 +1,15 @@
-import re
-
 class Item:
-    name = ""
-    modifiers = []
-
-
-
-    def __init__(self, identifier):
-        self.identifier = identifier
-        self.parse_identifier(identifier)
-
-    def parse_identifier(self, identifier):
-        match = re.search(r'[a-z][A-Z]', identifier)
-
-        if match:
-            name_end = match.start()
-            name_end += 1
-            self.name = identifier[:name_end]
-            self.modifiers = list(identifier[name_end:])
-        else:
-            self.name = identifier
+    def __init__(self, name, allergens, meal_type):
+        self.name = name
+        self.allergens = allergens
+        self.meal_type = meal_type
 
     def __str__(self):
-        #return self.name + "\t" + str(self.modifiers)
-        return self.name + "\t" + str(self.modifiers)
+        result = self.meal_type + " " + self.name + " ["
+
+        for allergen in self.allergens:
+            result += allergen.symbol + " "
+
+        result += "]"
+
+        return result

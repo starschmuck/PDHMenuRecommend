@@ -25,7 +25,7 @@ headers = {
 data = {
     'action': 'getMenus',
     'concept_id': '5',
-    'calendar_date': '2025-01-23',
+    'calendar_date': '2025-02-10',
 }
 
 response = requests.post('https://app.mymenumanager.net/fit/ajax.php', headers=headers, data=data)
