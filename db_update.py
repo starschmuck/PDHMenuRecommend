@@ -29,7 +29,7 @@ headers = {
 
 # FIREBASE INFO
 # (Keep the appropriate credentials file—this example uses the one from db_update)
-cred = credentials.Certificate('tasteful-panthers-firebase-adminsdk-fbsvc-a76f38037a.json')
+cred = credentials.Certificate('tasteful-panthers-firebase-adminsdk-fbsvc-e6f97e55eb.json')
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 

@@ -31,7 +31,7 @@ today = datetime.now().strftime("%Y-%m-%d")
 tomorrow = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
 
 # FIREBASE INFO
-cred = credentials.Certificate('tasteful-panthers-firebase-adminsdk-fbsvc-a1a3b9a61b.json')
+cred = credentials.Certificate('tasteful-panthers-firebase-adminsdk-fbsvc-e6f97e55eb.json')
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()
